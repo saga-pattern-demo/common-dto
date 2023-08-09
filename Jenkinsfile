@@ -17,7 +17,7 @@ pipeline {
 		}
 		stage("Publish to Nexus Repository Manager") {
 			steps {
-				sh "mvn deploy"
+				sh "mvn deploy -DskipTests"
 			}
 		}
 	}
