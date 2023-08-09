@@ -8,7 +8,7 @@ pipeline {
 		NEXUS_VERSION = "nexus3"
 		NEXUS_PROTOCOL = "http"
 		NEXUS_URL = "127.0.0.2:8081"
-		NEXUS_REPOSITORY = "saga-release"
+		NEXUS_REPOSITORY = "saga-release/"
 		NEXUS_CREDENTIAL_ID = "nexus-user-credentials"
 	}
 	stages {
