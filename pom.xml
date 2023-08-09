@@ -34,6 +34,15 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>saga-release</id>
+            <name>saga-release</name>
+            <url>http://localhost:8081/repository/saga-release/</url>
+        </repository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
