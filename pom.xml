@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.1</version>
+        <version>3.1.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.saga</groupId>
@@ -33,14 +33,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>maven-release</id>
-            <url>http://localhost:8081/repository/saga-release/</url>
-            <layout>default</layout>
-        </repository>
-    </distributionManagement>
 
     <build>
         <plugins>
