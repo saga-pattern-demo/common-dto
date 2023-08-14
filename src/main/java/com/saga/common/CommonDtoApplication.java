@@ -1,4 +1,4 @@
-package com.saga.commondto;
+package com.saga.common;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

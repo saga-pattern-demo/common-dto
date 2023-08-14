@@ -1,6 +1,6 @@
-package com.saga.commondto.dto;
+package com.saga.common.dto;
 
-import com.saga.commondto.enums.OrderStatus;
+import com.saga.common.enums.OrderStatus;
 import lombok.Data;
 
 import java.util.UUID;

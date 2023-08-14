@@ -1,4 +1,4 @@
-package com.saga.commondto.dto;
+package com.saga.common.dto;
 
 import lombok.Data;
 

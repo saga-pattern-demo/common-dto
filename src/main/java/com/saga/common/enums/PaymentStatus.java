@@ -1,4 +1,4 @@
-package com.saga.commondto.enums;
+package com.saga.common.enums;
 
 public enum PaymentStatus {
     PAYMENT_APPROVED,
