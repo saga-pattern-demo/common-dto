@@ -1,26 +1,26 @@
 # Common-DTO Service
 
-### Overview
+## Overview
 
 The Common-DTO Service Java is a Java-based service that provides a set of common Data Transfer Objects (DTOs) for use across multiple microservices or applications within a larger software ecosystem. This service is designed to promote code reusability and maintainability by centralizing the definition and management of DTOs that are frequently used in various parts of your system.
 
-### Table of Contents
+## Table of Contents
 
 1. [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
     - [Installation and Deploy](#Installation-and-Deploy)
 2. [Usage](#Usage)
 
-### Getting Started
+## Getting Started
 
-#### Prerequisites
+### Prerequisites
 
 Before you can use the Common-DTO Service, make sure you have the following prerequisites installed on your system:
 
 -   Java Development Kit (JDK) 17
 -   Maven (for building and managing dependencies)
 
-#### Installation and Deploy
+### Installation and Deploy
 
 1. Clone the Common-DTO Service repository to your local machine:
     ```
@@ -76,7 +76,7 @@ Before you can use the Common-DTO Service, make sure you have the following prer
         mvn -s .mvn/maven-settings.xml clean deploy
         ```
 
-### Usage
+## Usage
 
 This service provides a set of common DTOs that can be easily integrated into your microservices or applications. To use a DTO, follow these steps:
 
