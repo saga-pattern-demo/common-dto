@@ -31,18 +31,49 @@ Before you can use the Common-DTO Service, make sure you have the following prer
     cd common-dto
     ```
 3. Deploy to Nexus:
-    - Make sure you change the Nexus server in _pom.xml_:
+
+    - Make sure you replace the placeholders with your actual information in _.mvn/maven-settings.xml_:
+
         ```
-        <distributionManagement>
-            <repository>
-                <id>repository-id</id>
-                <url>http://your-repository-url</url>
-            </repository>
-        </distributionManagement>
+        <settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+            <servers>
+                <server>
+                    <id>nexus</id>
+                    <username>your-username</username>
+                    <password>your-password</password>
+                </server>
+            </servers>
+
+            <profiles>
+                <profile>
+                    <id>nexus</id>
+                    <repositories>
+                        <repository>
+                            <id>repository-id</id>
+                            <name>nexus-repo</name>
+                            <url>http://your-repository-url</url>
+                        </repository>
+                    </repositories>
+                    <properties>
+                        <altDeploymentRepository>
+                            nexus::default::http://your-repository-url
+                        </altDeploymentRepository>
+                    </properties>
+                </profile>
+            </profiles>
+
+            <activeProfiles>
+                <activeProfile>nexus</activeProfile>
+            </activeProfiles>
+
+        </settings>
         ```
+
     - Then deploy it:
         ```
-        mvn clean deploy
+        mvn -s .mvn/maven-settings.xml clean deploy
         ```
 
 ### Usage
@@ -50,8 +81,10 @@ Before you can use the Common-DTO Service, make sure you have the following prer
 This service provides a set of common DTOs that can be easily integrated into your microservices or applications. To use a DTO, follow these steps:
 
 1. First, we need to add custom setting maven file for download this dependency from nexus
+
     - Create a new file named maven-settings.xml in a directory of your choice.
     - Open the maven-settings.xml file with a text editor and paste the following code, replacing the placeholders with your actual information:
+
         ```
         <settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -80,10 +113,12 @@ This service provides a set of common DTOs that can be easily integrated into yo
             </activeProfiles>
         </settings>
         ```
+
     - Install maven dependencies:
         ```
         mvn -s path/to/maven-settings.xml clean install -U -Pnexus -DskipTests
         ```
+
 2. Import the Common-DTO Service library into your project's dependencies. You can do this by adding the following Maven dependency to your project's _pom.xml_ file:
     ```
     <dependency>
