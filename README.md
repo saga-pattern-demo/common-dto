@@ -7,8 +7,8 @@ The Common-DTO Service Java is a Java-based service that provides a set of commo
 ### Table of Contents
 
 1. [Getting Started](#Getting-Started)
-    - [Prerequisites](####Prerequisites)
-    - [Installation and Deploy](####Installation-and-Deploy)
+    - [Prerequisites](#Prerequisites)
+    - [Installation and Deploy](#Installation-and-Deploy)
 2. [Usage](#Usage)
 
 ### Getting Started
