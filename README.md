@@ -41,8 +41,8 @@ Before you can use the Common-DTO Service, make sure you have the following prer
             <servers>
                 <server>
                     <id>nexus</id>
-                    <username>your-username</username>
-                    <password>your-password</password>
+                    <username>your-username</username> <!-- replace here -->
+                    <password>your-password</password> <!-- replace here -->
                 </server>
             </servers>
 
@@ -51,15 +51,15 @@ Before you can use the Common-DTO Service, make sure you have the following prer
                     <id>nexus</id>
                     <repositories>
                         <repository>
-                            <id>repository-id</id>
+                            <id>repository-id</id> <!-- replace here -->
                             <name>nexus-repo</name>
-                            <url>http://your-repository-url</url>
+                            <url>http://your-repository-url</url> <!-- replace here -->
                         </repository>
                     </repositories>
                     <properties>
                         <altDeploymentRepository>
                             nexus::default::http://your-repository-url
-                        </altDeploymentRepository>
+                        </altDeploymentRepository> <!-- replace here -->
                     </properties>
                 </profile>
             </profiles>
@@ -91,9 +91,9 @@ This service provides a set of common DTOs that can be easily integrated into yo
                 xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
             <servers>
                 <server>
-                    <id>repository-id</id>
-                    <username>your-username</username>
-                    <password>your-password</password>
+                    <id>nexus</id>
+                    <username>your-username</username> <!-- replace here -->
+                    <password>your-password</password> <!-- replace here -->
                 </server>
             </servers>
             <profiles>
@@ -101,8 +101,8 @@ This service provides a set of common DTOs that can be easily integrated into yo
                     <id>nexus</id>
                     <repositories>
                     <repository>
-                        <id>repository-id</id>
-                        <url>http://your-repository-url</url>
+                        <id>repository-id</id> <!-- replace here -->
+                        <url>http://your-repository-url</url> <!-- replace here -->
                     </repository>
                     </repositories>
                 </profile>
